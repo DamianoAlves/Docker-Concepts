@@ -1,1 +1,12 @@
 # create your drupal and postgres config here, based off the last assignment
+version: '2'
+services:
+  drupal:
+    image: drupal
+    ports:
+      - "1337:80"
+
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=password
